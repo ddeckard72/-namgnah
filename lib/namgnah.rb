@@ -1,9 +1,12 @@
 require "namgnah/version"
+require "player"
+require "computer"
+require "board"
 
 module Namgnah
   class App
   	def initialize
-
+  		@game_finished = false
   	end
 
   	def run
@@ -12,7 +15,7 @@ module Namgnah
   		@name = STDIN.gets.chomp
   		puts "Enter your phrase: "
   		@phrase = STDIN.gets.chomp
-  		
+
   		# computer guesses until it get the phrase or loses
   		# add phrase to database
   		# play again?
